@@ -6,14 +6,22 @@ export default function Footer() {
   return (
     <footer className="max-w-5xl mx-auto border-t border-gray-700 py-8 my-8 flex justify-between text-sm text-gray-800 dark:text-gray-500">
       <p>Robin Yoong © {year}</p>
-      <div className="flex ">
-        {socialMediaLinks.map(({ name, link }) => (
-          <a target="_blank" rel="noopener noreferrer" href={link}>
-            <p className="ml-2 hover:text-gray-500 dark:hover:text-white">
-              {name}
-            </p>
-          </a>
-        ))}
+      <div className="flex">
+        <div className="flex ">
+          {socialMediaLinks.map(({ name, link }) => (
+            <a target="_blank" rel="noopener noreferrer" href={link} key={name}>
+              <p className="mx-2 hover:text-gray-500 dark:hover:text-white">
+                {name}
+              </p>
+            </a>
+          ))}
+        </div>
+        <a
+          className="ml-2 hover:text-gray-500 dark:hover:text-white"
+          href="mailto:robinyoong@gmail.com"
+        >
+          Email
+        </a>
       </div>
     </footer>
   );

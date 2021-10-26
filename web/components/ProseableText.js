@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
+import serializers from '../lib/serializers';
 
 export default function ProseableText({ blocks = [] }) {
   // Group together standard `_type === "block"`  blocks
@@ -35,12 +36,13 @@ export default function ProseableText({ blocks = [] }) {
     group[0]._type === 'block' ? (
       <div
         key={group[0]._key}
-        className="prose prose-lightType dark:prose-darkType py-4 text-gray-800 dark:text-white"
+        className="prose prose-lightType dark:prose-darkType py-4 text-gray-800 dark:text-white rounded-lg"
       >
         <BlockContent
           blocks={group}
           projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
           dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+          serializers={serializers}
         />
       </div>
     ) : (
@@ -49,6 +51,7 @@ export default function ProseableText({ blocks = [] }) {
         blocks={group}
         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+        serializers={serializers}
       />
     )
   );

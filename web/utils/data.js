@@ -4,9 +4,9 @@ export const navLinks = [
     path: '/',
     title: 'Robin Yoong',
   },
-  {
-    name: 'Posts',
-    path: '/posts',
-    title: `Robin's Posts`,
-  },
+  // {
+  //   name: 'Posts',
+  //   path: '/posts',
+  //   title: `Robin's Posts`,
+  // },
 ];
