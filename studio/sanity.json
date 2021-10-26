@@ -1,11 +1,12 @@
 {
   "root": true,
   "project": {
-    "name": "homeground"
+    "name": "homeground",
+    "basePath": "/studio"
   },
   "api": {
-    "projectId": "jwe19ezw",
-    "dataset": "production"
+    "projectId": "PULLED_FROM_ENV",
+    "dataset": "PULLED_FROM_ENV"
   },
   "plugins": [
     "@sanity/base",
