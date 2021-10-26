@@ -1,0 +1,21 @@
+{
+  "plugins": ["simple-import-sort", "prettier"],
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "node": true
+  }
+}
